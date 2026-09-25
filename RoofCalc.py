@@ -4,20 +4,28 @@ w_done = False
 L_done = False
 
 while w_done == False:
-    width = int(input("iNPUT THE width"))
-    if width < 3 or width > 5:
-        print("Invalid")
+    width = input("iNPUT THE width")
+    try:
+        width = int(width) 
+        if width < 3 or width > 5:
+            print("Invalid")
 
-    else:
-        w_done = True
+        else:
+            w_done = True
+    except:
+        print("Invalid")
 
 while L_done == False:
-    length = int(input("iNPUT THE length"))
-    if length < 5 or width > 15:
-        print("Invalid")
+    length = input("iNPUT THE length"))
+    try:
+        length = int(legnth)
+        if length < 5 or width > 15:
+            print("Invalid")
+        else:
+            L_done = True
+    except:
+        print("invalid")
 
-    else:
-        L_done = True
 
 power = 0 
 panels = 0
@@ -55,7 +63,6 @@ print("="*36)
 print(f"Customer{customername}")
 print("address" + CustomerAddress)
 print("="*36)
-
 print("Roof area" + str(area) + "square meters")
 print("Number of panels: " + str(panels))
 print("Maximum power output" + str(power))
@@ -66,3 +73,5 @@ print(f"Invertert: £{inverterCost}")
 print(f"Instillation: {installationCost}")
 print("="*36)
 print(f"TOTAL: {totalCost}")
+
+
